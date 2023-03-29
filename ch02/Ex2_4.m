@@ -1,3 +1,5 @@
+% 한밭대학교 20191780 육정훈
+
 n = [0:15];
 x = stepseq(0, 0,  15)-stepseq(10, 0, 15);
 [xe, xo, m] = evenodd(x, n);

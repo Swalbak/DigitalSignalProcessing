@@ -1,7 +1,7 @@
-n = 0 : 10;
-x = stepseq(0, 0, 10);
-x1, m = dnsample(x, n, 2);
+n = -50:50;
+x = sin(0.125 * pi * n);
+[y, m] = dnsample(x, n, 4);
 
-subplot(1, 2, 1); stem(n, x); title('Imag'); xlabel('n'); ylabel('x(n)');
-subplot(1, 2, 2); stem(m, x1); title('Imag'); xlabel('n'); ylabel('x(n)');
+subplot(1, 2, 1); stem(n, x); title('sin(0.125*pi*n)'); xlabel('n'); ylabel('x(n)');
+subplot(1, 2, 2); stem(m, y); title('dnsampled'); xlabel('n'); ylabel('y(n)');
 
