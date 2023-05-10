@@ -1,15 +1,14 @@
-% Ex3_22
+% Ex3_24_1
 
-Ts = 0.001;
-n = -5:1:5;
+Ts = 0.0002;
+n = -25:25;
 nTs = n * Ts;
-Fs = 1/Ts;
 x = exp(-1000 * abs(nTs));
 Dt = 0.00005;
 t = -0.005:Dt:0.005;
-xa = x * sinc(Fs * (ones(length(n), 1)*t - nTs'*ones(1, length(t))));
+xa = spline(nTs, x, t);
 
-plot(t * 1000, xa); hold on;
+plot(t * 5000, xa); hold on;
 
 stem(n, x); hold off;
 
